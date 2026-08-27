@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MS Soluciones | ClinPOS</title>
+    <style>
+        :root { 
+            --bg-dark: #0a0a0a; 
+            --bg-card: #141414; 
+            --gold: #d4af37; 
+            --gold-light: #f3e5ab; 
+            --text-main: #e2e8f0; 
+            --text-muted: #94a3b8; 
+            --white: #ffffff; 
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+        body { color: var(--text-main); background-color: var(--bg-dark); line-height: 1.6; }
+        
+        header { background-color: rgba(10, 10, 10, 0.95); backdrop-filter: blur(10px); border-bottom: 1px solid #222; position: fixed; width: 100%; top: 0; z-index: 1000; }
+        .nav-container { max-width: 1200px; margin: 0 auto; padding: 20px; display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-size: 1.5rem; font-weight: bold; color: var(--white); text-decoration: none; letter-spacing: 1px; }
+        .logo span { color: var(--gold); }
+        
+        nav a { margin-left: 20px; text-decoration: none; color: var(--text-muted); font-weight: 600; }
+        nav a:hover, nav a.active { color: var(--gold); }
+        
+        .content { max-width: 1000px; margin: 0 auto; padding: 140px 20px 80px 20px; text-align: center; }
+        .badge { background-color: rgba(212, 175, 55, 0.1); color: var(--gold); border: 1px solid var(--gold); padding: 6px 14px; font-size: 0.85rem; border-radius: 20px; font-weight: bold; text-transform: uppercase; }
+        h1 { font-size: 3rem; color: var(--white); margin: 20px 0; }
+        p { font-size: 1.2rem; margin-bottom: 30px; color: var(--text-muted); }
+        
+        .features { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; text-align: left; margin-top: 40px; }
+        .feature-box { background: var(--bg-card); padding: 25px; border-radius: 8px; border: 1px solid #222; }
+        .feature-box h4 { color: var(--gold); margin-bottom: 10px; font-size: 1.2rem; }
+        .feature-box p { font-size: 1rem; color: var(--text-muted); margin-bottom: 0; }
+        
+        .btn { display: inline-block; background-color: var(--gold); color: #0a0a0a; padding: 12px 30px; border-radius: 6px; text-decoration: none; font-weight: bold; margin-top: 40px; transition: background 0.3s; }
+        .btn:hover { background-color: var(--gold-light); }
+        
+        footer { background-color: #050505; color: var(--text-muted); text-align: center; padding: 30px 20px; margin-top: 80px; border-top: 1px solid #222; }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="nav-container">
+            <a href="index.html" class="logo">MS<span>Soluciones</span></a>
+            <nav>
+                <a href="index.html">Inicio</a>
+                <a href="servicios.html">Servicios</a>
+                <a href="clinpos.html" class="active">ClinPOS</a>
+                <a href="contacto.html">Contacto</a>
+            </nav>
+        </div>
+    </header>
+
+    <div class="content">
+        <span class="badge">Software de Escritorio</span>
+        <h1>ClinPOS</h1>
+        <p>El sistema de punto de venta inteligente optimizado para comercios. Diseñado para ofrecer agilidad, control y estabilidad operativa absoluta.</p>
+        
+        <div class="features">
+            <div class="feature-box">
+                <h4>Control de Inventario</h4>
+                <p>Monitoreo en tiempo real de entradas, salidas y existencias de productos.</p>
+            </div>
+            <div class="feature-box">
+                <h4>Crédito a Clientes</h4>
+                <p>Administración de cuentas corrientes y seguimiento de pagos de forma sencilla.</p>
+            </div>
+            <div class="feature-box">
+                <h4>Reportes de Ventas</h4>
+                <p>Informes claros y detallados para la toma de decisiones financieras oportunas.</p>
+            </div>
+        </div>
+
+        <a href="contacto.html" class="btn">Solicitar Información de ClinPOS</a>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 MS Soluciones. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>

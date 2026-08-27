@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MS Soluciones | Consultoría, Desarrollo y ClinPOS</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'ms-navy': '#0B1F3A',
+                        'ms-gold': '#D4AF37',
+                    },
+                    fontFamily: {
+                        'sans': ['Inter', 'system-ui', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        html { scroll-behavior: smooth; }
+        body { background-color: #FFFFFF; color: #0B1F3A; font-family: 'Inter', sans-serif; }
+        .reveal { opacity: 0; transform: translateY(20px); transition: opacity 0.6s ease-out, transform 0.6s ease-out; }
+        .reveal.active { opacity: 1; transform: translateY(0); }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- HEADER -->
+    <header class="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-md border-b border-gray-100">
+        <nav class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+            <a href="#hero" class="flex items-center gap-3">
+                <img src="logo_ms.png" alt="MS Soluciones" class="h-9 w-auto object-contain">
+                <span class="font-bold text-lg tracking-tight text-[#0B1F3A]">MS SOLUCIONES</span>
+            </a>
+            <div class="hidden lg:flex items-center gap-8 text-sm font-medium text-gray-600">
+                <a href="#sobre-nosotros" class="hover:text-[#D4AF37] transition">Sobre Nosotros</a>
+                <a href="#servicios" class="hover:text-[#D4AF37] transition">Servicios</a>
+                <a href="#clinpos" class="font-bold text-[#D4AF37] transition">ClinPOS</a>
+                <a href="#casos" class="hover:text-[#D4AF37] transition">Casos de Éxito</a>
+                <a href="#contacto" class="hover:text-[#D4AF37] transition">Contacto</a>
+            </div>
+            <div class="flex items-center gap-4">
+                <a href="#contacto" class="hidden sm:inline-flex px-5 py-2.5 bg-[#0B1F3A] text-white text-sm font-semibold rounded-full hover:bg-[#15325b] transition shadow-md">
+                    Agendar Asesoría
+                </a>
+                <button id="mobile-menu-btn" class="lg:hidden text-2xl text-[#0B1F3A] focus:outline-none">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </nav>
+        <!-- Menú Móvil -->
+        <div id="mobile-menu" class="hidden lg:hidden bg-white border-t border-gray-100 p-6 space-y-4">
+            <a href="#sobre-nosotros" class="block text-gray-700 font-medium">Sobre Nosotros</a>
+            <a href="#servicios" class="block text-gray-700 font-medium">Servicios</a>
+            <a href="#clinpos" class="block text-[#D4AF37] font-bold">ClinPOS</a>
+            <a href="#casos" class="block text-gray-700 font-medium">Casos de Éxito</a>
+            <a href="#contacto" class="block text-gray-700 font-medium">Contacto</a>
+            <a href="#contacto" class="block text-center py-3 bg-[#0B1F3A] text-white rounded-full font-bold">Agendar Asesoría</a>
+        </div>
+    </header>
+
+    <!-- HERO PRINCIPAL -->
+    <section id="hero" class="pt-36 pb-24 bg-[#0B1F3A] text-white relative overflow-hidden">
+        <div class="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(212,175,55,0.15),transparent_50%)]"></div>
+        <div class="max-w-7xl mx-auto px-6 grid lg:grid-cols-12 gap-12 items-center relative z-10">
+            <div class="lg:col-span-7 space-y-6">
+                <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/10 text-[#D4AF37] text-xs font-semibold tracking-wider uppercase border border-white/10">
+                    <i class="fa-solid fa-star text-[10px]"></i> Consultoría & Desarrollo Tecnológico
+                </div>
+                <h1 class="text-4xl sm:text-6xl font-extrabold tracking-tight leading-[1.1]">
+                    Estrategia Organizacional y <span class="text-transparent bg-clip-text bg-gradient-to-r from-[#D4AF37] to-amber-200">Software a la Medida</span>
+                </h1>
+                <p class="text-lg text-gray-300 leading-relaxed max-w-2xl">
+                    Fundado por <strong class="text-white">Mauricio Santamaría</strong> (Pedagogo, Maestro en Psicología Organizacional y Desarrollador). Fusionamos el potencial humano con herramientas digitales exactas.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 pt-4">
+                    <a href="#clinpos" class="px-8 py-4 bg-[#D4AF37] text-[#0B1F3A] font-bold rounded-full text-center hover:bg-amber-400 transition shadow-lg shadow-[#D4AF37]/20 flex items-center justify-center gap-2">
+                        Ver ClinPOS <i class="fa-solid fa-arrow-right text-xs"></i>
+                    </a>
+                    <a href="#servicios" class="px-8 py-4 bg-white/5 border border-white/20 text-white font-bold rounded-full text-center hover:bg-white/10 transition flex items-center justify-center">
+                        Explorar Servicios
+                    </a>
+                </div>
+            </div>
+            <div class="lg:col-span-5 relative">
+                <div class="relative rounded-2xl overflow-hidden border border-white/15 shadow-2xl bg-white/5 p-2 backdrop-blur-sm">
+                    <img src="captura.png" alt="MS Soluciones Dashboard" class="rounded-xl w-full h-auto object-cover shadow-2xl">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SOBRE NOSOTROS -->
+    <section id="sobre-nosotros" class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid lg:grid-cols-12 gap-12 items-center">
+                <div class="lg:col-span-5 space-y-6">
+                    <span class="text-xs font-bold uppercase tracking-widest text-[#D4AF37]">Dirección Experta</span>
+                    <h2 class="text-3xl sm:text-4xl font-extrabold text-[#0B1F3A] tracking-tight">Mauricio Santamaría</h2>
+                    <p class="text-gray-600 leading-relaxed text-base">
+                        Pedagogo, Maestro en Psicología Organizacional, Especialista en Recursos Humanos y Consultor en Desarrollo Organizacional. Como desarrollador de software empresarial, entiendo profundamente que los mejores sistemas nacen de comprender primero a las personas que los operan.
+                    </p>
+                    <div class="grid grid-cols-2 gap-4 pt-2">
+                        <div class="p-4 rounded-2xl bg-gray-50 border border-gray-100">
+                            <span class="block text-2xl font-extrabold text-[#D4AF37]">15+</span>
+                            <span class="text-xs text-gray-500 font-medium">Años de Trayectoria</span>
+                        </div>
+                        <div class="p-4 rounded-2xl bg-gray-50 border border-gray-100">
+                            <span class="block text-2xl font-extrabold text-[#D4AF37]">100%</span>
+                            <span class="text-xs text-gray-500 font-medium">Enfoque Humano-Técnico</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="lg:col-span-7 grid sm:grid-cols-2 gap-6">
+                    <div class="p-6 rounded-3xl bg-gray-50 border border-gray-100 space-y-3">
+                        <div class="w-12 h-12 rounded-2xl bg-[#D4AF37]/10 text-[#D4AF37] flex items-center justify-center text-xl"><i class="fa-solid fa-graduation-cap"></i></div>
+                        <h3 class="text-lg font-bold text-[#0B1F3A]">Pedagogía & Formación</h3>
+                        <p class="text-sm text-gray-600">Diseño instruccional y transferencia de conocimientos efectivos para equipos de trabajo.</p>
+                    </div>
+                    <div class="p-6 rounded-3xl bg-gray-50 border border-gray-100 space-y-3">
+                        <div class="w-12 h-12 rounded-2xl bg-[#D4AF37]/10 text-[#D4AF37] flex items-center justify-center text-xl"><i class="fa-solid fa-brain"></i></div>
+                        <h3 class="text-lg font-bold text-[#0B1F3A]">Psicología Organizacional</h3>
+                        <p class="text-sm text-gray-600">Diagnósticos precisos de clima laboral, motivación y estructura de capital humano.</p>
+                    </div>
+                    <div class="p-6 rounded-3xl bg-gray-50 border border-gray-100 space-y-3">
+                        <div class="w-12 h-12 rounded-2xl bg-[#D4AF37]/10 text-[#D4AF37] flex items-center justify-center text-xl"><i class="fa-solid fa-code"></i></div>
+                        <h3 class="text-lg font-bold text-[#0B1F3A]">Software Empresarial</h3>
+                        <p class="text-sm text-gray-600">Arquitectura de sistemas robustos en Python, bases de datos y herramientas optimizadas.</p>
+                    </div>
+                    <div class="p-6 rounded-3xl bg-gray-50 border border-gray-100 space-y-3">
+                        <div class="w-12 h-12 rounded-2xl bg-[#D4AF37]/10 text-[#D4AF37] flex items-center justify-center text-xl"><i class="fa-solid fa-chart-pie"></i></div>
+                        <h3 class="text-lg font-bold text-[#0B1F3A]">Desarrollo Estratégico</h3>
+                        <p class="text-sm text-gray-600">Planeación e intervención directiva para alinear objetivos de negocio y operaciones.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SERVICIOS (Los 7 servicios completos) -->
+    <section id="servicios" class="py-24 bg-gray-50 border-t border-gray-100">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center max-w-2xl mx-auto space-y-3 mb-16">
+                <span class="text-xs font-bold uppercase tracking-widest text-[#D4AF37]">Soluciones Profesionales</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-[#0B1F3A] tracking-tight">Nuestros Servicios</h2>
+                <p class="text-gray-600 text-sm">Cada servicio está diseñado para impulsar la productividad, orden y estabilidad de tu organización.</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- 1 -->
+                <div class="p-8 rounded-3xl bg-white border border-gray-100 shadow-sm hover:shadow-md transition group">
+                    <div class="w-12 h-12 rounded-2xl bg-[#D4AF37]/10 text-[#D4AF37] flex items-center justify-center text-xl mb-6 group-hover:bg-[#D4AF37] group-hover:text-[#0B1F3A] transition">1</div>
+                    <h3 class="text-xl font-bold text-[#0B1F3A] mb-2">Recursos Humanos</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed mb-6">Estructuración integral de áreas de talento, descripciones de puesto, tabuladores y normativas.</p>
+                    <a href="#contacto" class="text-xs font-bold text-[#D4AF37] flex items-center gap-1">Solicitar servicio <i class="fa-solid fa-chevron-right text-[10px]"></i></a>
+                </div>
+                <!-- 2 -->
+                <div class="p-8 rounded-3xl bg-white border border-gray-100 shadow-sm hover:shadow-md transition group">
+                    <div class="w-12 h-12 rounded-2xl bg-[#D4AF37]/10 text-[#D4AF37] flex items-center justify-center text-xl mb-6 group-hover:bg-[#D4AF37] group-hover:text-[#0B1F3A] transition">2</div>
+                    <h3 class="text-xl font-bold text-[#0B1F3A] mb-2">Capacitación</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed mb-6">Talleres experienciales, programas formativos y dinámicas de equipo con base pedagógica sólida.</p>
+                    <a href="#contacto" class="text-xs font-bold text-[#D4AF37] flex items-center gap-1">Solicitar servicio <i class="fa-solid fa-chevron-right text-[10px]"></i></a>
+                </div>
+                <!-- 3 -->
+                <div class="p-8 rounded-3xl bg-white border border-gray-100 shadow-sm hover:shadow-md transition group">
+                    <div class="w-12 h-12 rounded-2xl bg-[#D4AF37]/10 text-[#D4AF37] flex items-center justify-center text-xl mb-6 group-hover:bg-[#D4AF37] group-hover:text-[#0B1F3A] transition">3</div>
+                    <h3 class="text-xl font-bold text-[#0B1F3A] mb-2">Desarrollo Organizacional</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed mb-6">Intervenciones directivas para alinear la cultura corporativa, canales de comunicación y gestión del cambio.</p>
+                    <a href="#contacto" class="text-xs font-bold text-[#D4AF37] flex items-center gap-1">Solicitar servicio <i class="fa-solid fa-chevron-right text-[10px]"></i></a>
+                </div>
+                <!-- 4 -->
+                <div class="p-8 rounded-3xl bg-white border border-gray-100 shadow-sm hover:shadow-md transition group">
+                    <div class="w-12 h-12 rounded-2xl bg-[#D4AF37]/10 text-[#D4AF37] flex items-center justify-center text-xl mb-6 group-hover:bg-[#D4AF37] group-hover:text-[#0B1F3A] transition">4</div>
+                    <h3 class="text-xl font-bold text-[#0B1F3A] mb-2">Diagnóstico Organizacional</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed mb-6">Evaluación profunda del clima laboral y detección de cuellos de botella operativos y humanos.</p>
+                    <a href="#contacto" class="text-xs font-bold text-[#D4AF37] flex items-center gap-1">Solicitar servicio <i class="fa-solid fa-chevron-right text-[10px]"></i></a>
+                </div>
+                <!-- 5 -->
+                <div class="p-8 rounded-3xl bg-white border border-gray-100 shadow-sm hover:shadow-md transition group">
+                    <div class="w-12 h-12 rounded-2xl bg-[#D4AF37]/10 text-[#D4AF37] flex items-center justify-center text-xl mb-6 group-hover:bg-[#D4AF37] group-hover:text-[#0B1F3A] transition">5</div>
+                    <h3 class="text-xl font-bold text-[#0B1F3A] mb-2">Automatización de Procesos</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed mb-6">Eliminación de tareas manuales repetitivas mediante scripts en Python, Google Sheets y AppSheet.</p>
+                    <a href="#contacto" class="text-xs font-bold text-[#D4AF37] flex items-center gap-1">Solicitar servicio <i class="fa-solid fa-chevron-right text-[10px]"></i></a>
+                </div>
+                <!-- 6 -->
+                <div class="p-8 rounded-3xl bg-white border border-gray-100 shadow-sm hover:shadow-md transition group">
+                    <div class="w-12 h-12 rounded-2xl bg-[#D4AF37]/10 text-[#D4AF37] flex items-center justify-center text-xl mb-6 group-hover:bg-[#D4AF37] group-hover:text-[#0B1F3A] transition">6</div>
+                    <h3 class="text-xl font-bold text-[#0B1F3A] mb-2">Desarrollo de Sistemas</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed mb-6">Creación de software de escritorio y herramientas a medida adaptadas exactamente a tu operación.</p>
+                    <a href="#contacto" class="text-xs font-bold text-[#D4AF37] flex items-center gap-1">Solicitar servicio <i class="fa-solid fa-chevron-right text-[10px]"></i></a>
+                </div>
+                <!-- 7: ClinPOS destacado -->
+                <div class="p-8 rounded-3xl bg-[#0B1F3A] text-white border border-[#D4AF37]/30 shadow-lg md:col-span-2 lg:col-span-3 flex flex-col md:flex-row items-center justify-between gap-6">
+                    <div class="space-y-2">
+                        <div class="inline-block px-3 py-1 bg-[#D4AF37] text-[#0B1F3A] font-bold text-xs rounded-full">Servicio Estrella</div>
+                        <h3 class="text-2xl font-extrabold">7. ClinPOS (Sistema de Punto de Venta)</h3>
+                        <p class="text-gray-300 text-sm max-w-2xl">La solución definitiva para tienditas, papelerías y abarrotes. Control total desde $10 pesos al día.</p>
+                    </div>
+                    <a href="#clinpos" class="px-6 py-3 bg-[#D4AF37] text-[#0B1F3A] font-bold rounded-full hover:bg-amber-400 transition whitespace-nowrap">Ver Landing de ClinPOS</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- LANDING COMPLETA DE CLINPOS (Con todos los beneficios, comparación, precios y capturas) -->
+    <section id="clinpos" class="py-28 bg-[#0B1F3A] text-white">
+        <div class="max-w-7xl mx-auto px-6">
+            
+            <!-- ClinPOS Hero -->
+            <div class="text-center max-w-3xl mx-auto space-y-6 mb-20">
+                <img src="logo_clinpos.png" alt="Logo ClinPOS" class="h-16 mx-auto object-contain">
+                <span class="inline-block px-4 py-1.5 rounded-full bg-[#D4AF37]/20 text-[#D4AF37] text-xs font-bold tracking-widest uppercase border border-[#D4AF37]/30">Punto de Venta Profesional</span>
+                <h2 class="text-4xl sm:text-6xl font-extrabold tracking-tight">
+                    Controla tu negocio desde <span class="text-[#D4AF37]">$10 pesos al día</span>
+                </h2>
+                <p class="text-lg text-gray-300">
+                    Diseñado específicamente para tienditas, papelerías, ferreterías, abarrotes, minisupers y negocios familiares.
+                </p>
+                <div class="pt-2 flex flex-wrap justify-center gap-4">
+                    <a href="#clinpos-demo" class="px-8 py-4 rounded-full font-bold text-[#0B1F3A] bg-[#D4AF37] hover:bg-amber-400 transition shadow-xl shadow-[#D4AF37]/20">
+                        Solicitar Demostración
+                    </a>
+                    <a href="https://wa.me/529990000000?text=Hola,%20me%20interesa%20ClinPOS" target="_blank" class="px-8 py-4 rounded-full font-bold text-white bg-emerald-600 hover:bg-emerald-500 transition flex items-center gap-2">
+                        <i class="fa-brands fa-whatsapp text-lg"></i> WhatsApp Directo
+                    </a>
+                </div>
+            </div>
+
+            <!-- ClinPOS Captura Principal -->
+            <div class="mb-24 rounded-3xl overflow-hidden border border-[#D4AF37]/30 shadow-2xl p-3 bg-white/5 backdrop-blur-sm max-w-5xl mx-auto">
+                <img src="captura_1.1.png" alt="ClinPOS Sistema Principal" class="rounded-2xl w-full h-auto object-cover">
+            </div>
+
+            <!-- Beneficios de ClinPOS (Los 7 beneficios detallados con sus capturas) -->
+            <div class="mb-24">
+                <div class="text-center max-w-2xl mx-auto space-y-3 mb-16">
+                    <h3 class="text-3xl font-extrabold tracking-tight">Beneficios Principales</h3>
+                    <p class="text-gray-300 text-sm">Todo lo que tu mostrador necesita para operar sin errores ni pérdidas.</p>
+                </div>
+                <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <!-- 1 -->
+                    <div class="p-6 rounded-3xl bg-white/5 border border-white/10 space-y-3">
+                        <div class="text-[#D4AF37] text-2xl"><i class="fa-solid fa-boxes-stacked"></i></div>
+                        <h4 class="text-lg font-bold">Control de Inventario</h4>
+                        <p class="text-xs text-gray-300">Existencias al día para evitar faltantes y mermas.</p>
+                        <div class="pt-2"><img src="captura_3.png" alt="Inventario" class="rounded-xl h-28 w-full object-cover"></div>
+                    </div>
+                    <!-- 2 -->
+                    <div class="p-6 rounded-3xl bg-white/5 border border-white/10 space-y-3">
+                        <div class="text-[#D4AF37] text-2xl"><i class="fa-solid fa-cash-register"></i></div>
+                        <h4 class="text-lg font-bold">Corte de Caja</h4>
+                        <p class="text-xs text-gray-300">Arqueos rápidos, seguros y exactos al terminar el turno.</p>
+                        <div class="pt-2"><img src="captura_4.png" alt="Corte de Caja" class="rounded-xl h-28 w-full object-cover"></div>
+                    </div>
+                    <!-- 3 -->
+                    <div class="p-6 rounded-3xl bg-white/5 border border-white/10 space-y-3">
+                        <div class="text-[#D4AF37] text-2xl"><i class="fa-solid fa-receipt"></i></div>
+                        <h4 class="text-lg font-bold">Tickets</h4>
+                        <p class="text-xs text-gray-300">Emisión rápida de comprobantes para tus clientes.</p>
+                        <div class="pt-2"><img src="captura_4.1.png" alt="Tickets" class="rounded-xl h-28 w-full object-cover"></div>
+                    </div>
+                    <!-- 4 -->
+                    <div class="p-6 rounded-3xl bg-white/5 border border-white/10 space-y-3">
+                        <div class="text-[#D4AF37] text-2xl"><i class="fa-solid fa-chart-line"></i></div>
+                        <h4 class="text-lg font-bold">Reportes</h4>
+                        <p class="text-xs text-gray-300">Conoce tus ventas diarias y artículos más rentables.</p>
+                        <div class="pt-2"><img src="captura_5.png" alt="Reportes" class="rounded-xl h-28 w-full object-cover"></div>
+                    </div>
+                    <!-- 5, 6, 7 -->
+                    <div class="p-6 rounded-3xl bg-white/5 border border-white/10 space-y-3">
+                        <div class="text-[#D4AF37] text-2xl"><i class="fa-solid fa-users-gear"></i></div>
+                        <h4 class="text-lg font-bold">Usuarios</h4>
+                        <p class="text-xs text-gray-300">Roles y permisos para administradores y cajeros.</p>
+                        <div class="pt-2"><img src="captura_6.png" alt="Usuarios" class="rounded-xl h-28 w-full object-cover"></div>
+                    </div>
+                    <div class="p-6 rounded-3xl bg-white/5 border border-white/10 space-y-3">
+                        <div class="text-[#D4AF37] text-2xl"><i class="fa-solid fa-user-tag"></i></div>
+                        <h4 class="text-lg font-bold">Clientes</h4>
+                        <p class="text-xs text-gray-300">Historial y seguimiento de compras frecuentes.</p>
+                        <div class="pt-2"><img src="captura_7.png" alt="Clientes" class="rounded-xl h-28 w-full object-cover"></div>
+                    </div>
+                    <div class="p-6 rounded-3xl bg-white/5 border border-white/10 space-y-3 sm:col-span-2">
+                        <div class="text-[#D4AF37] text-2xl"><i class="fa-solid fa-wallet"></i></div>
+                        <h4 class="text-lg font-bold">Compras y Gastos</h4>
+                        <p class="text-xs text-gray-300">Registra proveedores, facturas y salidas de dinero de forma clara.</p>
+                        <div class="grid grid-cols-2 gap-2 pt-2">
+                            <img src="captura_8.png" alt="Gastos 1" class="rounded-xl h-24 w-full object-cover">
+                            <img src="captura_9.png" alt="Gastos 2" class="rounded-xl h-24 w-full object-cover">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Comparación: Libreta vs Excel vs ClinPOS -->
+            <div class="mb-24 bg-white/5 border border-white/10 rounded-3xl p-8 sm:p-12">
+                <div class="text-center max-w-2xl mx-auto space-y-3 mb-12">
+                    <h3 class="text-3xl font-extrabold tracking-tight">¿Por qué cambiarte a ClinPOS?</h3>
+                    <p class="text-gray-300 text-sm">Supera las limitaciones de los métodos tradicionales.</p>
+                </div>
+                <div class="grid lg:grid-cols-3 gap-8">
+                    <div class="p-6 rounded-2xl bg-black/30 border border-white/5 space-y-4">
+                        <h4 class="text-lg font-bold text-red-400"><i class="fa-solid fa-book mr-2"></i> Libreta Tradicional</h4>
+                        <ul class="space-y-3 text-xs text-gray-300">
+                            <li><i class="fa-solid fa-xmark text-red-400 mr-2"></i> Altos errores de cálculo manual.</li>
+                            <li><i class="fa-solid fa-xmark text-red-400 mr-2"></i> Cero control de inventario exacto.</li>
+                            <li><i class="fa-solid fa-xmark text-red-400 mr-2"></i> Información vulnerable a pérdidas físicas.</li>
+                        </ul>
+                    </div>
+                    <div class="p-6 rounded-2xl bg-black/30 border border-white/5 space-y-4">
+                        <h4 class="text-lg font-bold text-amber-400"><i class="fa-solid fa-file-excel mr-2"></i> Hojas de Excel</h4>
+                        <ul class="space-y-3 text-xs text-gray-300">
+                            <li><i class="fa-solid fa-triangle-exclamation text-amber-400 mr-2"></i> Fórmulas propensas a romperse.</li>
+                            <li><i class="fa-solid fa-triangle-exclamation text-amber-400 mr-2"></i> Lento y poco práctico en horas pico.</li>
+                            <li><i class="fa-solid fa-triangle-exclamation text-amber-400 mr-2"></i> Sin control de múltiples usuarios.</li>
+                        </ul>
+                    </div>
+                    <div class="p-6 rounded-2xl bg-[#D4AF37]/15 border border-[#D4AF37]/50 space-y-4 relative">
+                        <div class="absolute -top-3 right-6 bg-[#D4AF37] text-[#0B1F3A] text-[10px] font-extrabold px-3 py-1 rounded-full">Recomendado</div>
+                        <h4 class="text-lg font-bold text-[#D4AF37]"><i class="fa-solid fa-bolt mr-2"></i> ClinPOS</h4>
+                        <ul class="space-y-3 text-xs text-white">
+                            <li><i class="fa-solid fa-check text-[#D4AF37] mr-2"></i> Interfaz sumamente rápida y limpia.</li>
+                            <li><i class="fa-solid fa-check text-[#D4AF37] mr-2"></i> Cortes de caja automáticos en segundos.</li>
+                            <li><i class="fa-solid fa-check text-[#D4AF37] mr-2"></i> Soporte y estabilidad garantizada.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Planes y Precios -->
+            <div class="mb-24">
+                <div class="text-center max-w-2xl mx-auto space-y-3 mb-16">
+                    <h3 class="text-3xl font-extrabold tracking-tight">Planes y Precios</h3>
+                    <p class="text-gray-300 text-sm">Inversión justa que se paga sola desde el primer día de uso.</p>
+                </div>
+                <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                    <div class="p-8 rounded-3xl bg-white/5 border border-white/10 flex flex-col justify-between">
+                        <div class="space-y-4">
+                            <h4 class="text-2xl font-bold">Licencia Estándar</h4>
+                            <p class="text-xs text-gray-300">Para tienditas y negocios con una sola caja.</p>
+                            <div class="text-4xl font-extrabold text-[#D4AF37]">$10 <span class="text-xs font-normal text-gray-300">MXN / día</span></div>
+                            <ul class="space-y-3 text-xs text-gray-200 pt-4 border-t border-white/10">
+                                <li><i class="fa-solid fa-check text-[#D4AF37] mr-2"></i> Control de inventario</li>
+                                <li><i class="fa-solid fa-check text-[#D4AF37] mr-2"></i> Cortes de caja diarios</li>
+                                <li><i class="fa-solid fa-check text-[#D4AF37] mr-2"></i> Tickets y reportes básicos</li>
+                            </ul>
+                        </div>
+                        <div class="pt-8">
+                            <a href="#clinpos-demo" class="block text-center py-3 rounded-full font-bold text-[#0B1F3A] bg-[#D4AF37] hover:bg-amber-400 transition text-sm">Seleccionar Plan</a>
+                        </div>
+                    </div>
+                    <div class="p-8 rounded-3xl bg-gradient-to-b from-[#D4AF37]/20 to-white/5 border border-[#D4AF37]/50 flex flex-col justify-between relative">
+                        <div class="absolute -top-3 right-6 bg-[#D4AF37] text-[#0B1F3A] text-[10px] font-extrabold px-3 py-1 rounded-full">Más Popular</div>
+                        <div class="space-y-4">
+                            <h4 class="text-2xl font-bold">Licencia Pro + Multi-Usuario</h4>
+                            <p class="text-xs text-gray-300">Para minisupers y negocios con cajeros.</p>
+                            <div class="text-4xl font-extrabold text-[#D4AF37]">$15 <span class="text-xs font-normal text-gray-300">MXN / día</span></div>
+                            <ul class="space-y-3 text-xs text-white pt-4 border-t border-white/10">
+                                <li><i class="fa-solid fa-check text-[#D4AF37] mr-2"></i> Todo lo del plan Estándar</li>
+                                <li><i class="fa-solid fa-check text-[#D4AF37] mr-2"></i> Control de permisos y usuarios</li>
+                                <li><i class="fa-solid fa-check text-[#D4AF37] mr-2"></i> Módulo de compras, gastos y clientes</li>
+                            </ul>
+                        </div>
+                        <div class="pt-8">
+                            <a href="#clinpos-demo" class="block text-center py-3 rounded-full font-bold text-[#0B1F3A] bg-[#D4AF37] hover:bg-amber-400 transition text-sm">Seleccionar Plan Pro</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Testimonios y FAQ -->
+            <div class="grid lg:grid-cols-2 gap-12 mb-24">
+                <div>
+                    <h3 class="text-2xl font-bold mb-6">Testimonios de Tenderos</h3>
+                    <div class="space-y-4">
+                        <div class="p-6 rounded-2xl bg-white/5 border border-white/10 space-y-2">
+                            <p class="text-xs text-gray-300 italic">"Antes tardaba una hora haciendo cuentas a mano. Con ClinPOS mi corte está listo en 2 minutos."</p>
+                            <p class="text-[11px] font-bold text-[#D4AF37]">— Don Roberto, Abarrotes La Esquina</p>
+                        </div>
+                        <div class="p-6 rounded-2xl bg-white/5 border border-white/10 space-y-2">
+                            <p class="text-xs text-gray-300 italic">"Muy fácil de usar, mis empleados aprendieron al instante y tengo control total de mi papelería."</p>
+                            <p class="text-[11px] font-bold text-[#D4AF37]">— Laura M., Papelería El Lápiz</p>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="text-2xl font-bold mb-6">Preguntas Frecuentes</h3>
+                    <div class="space-y-4">
+                        <div class="p-4 rounded-2xl bg-white/5 border border-white/10">
+                            <h4 class="font-bold text-xs text-[#D4AF37]">¿Requiere internet constante?</h4>
+                            <p class="text-[11px] text-gray-300 mt-1">No, opera de forma local para garantizar velocidad máxima en tu mostrador.</p>
+                        </div>
+                        <div class="p-4 rounded-2xl bg-white/5 border border-white/10">
+                            <h4 class="font-bold text-xs text-[#D4AF37]">¿Cómo se instala?</h4>
+                            <p class="text-[11px] text-gray-300 mt-1">Te entregamos el instalador directo y te apoyamos en la configuración inicial.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Formulario de Demostración ClinPOS -->
+            <div id="clinpos-demo" class="max-w-2xl mx-auto p-8 sm:p-12 rounded-3xl bg-white/5 border border-[#D4AF37]/30 shadow-2xl">
+                <div class="text-center space-y-2 mb-8">
+                    <h3 class="text-2xl font-extrabold">Solicita una Demostración</h3>
+                    <p class="text-xs text-gray-300">Descubre cómo ClinPOS puede transformar la operación de tu negocio hoy.</p>
+                </div>
+                <form id="demo-form" class="space-y-4">
+                    <div>
+                        <label class="block text-[10px] font-bold uppercase tracking-wider text-[#D4AF37] mb-1">Nombre del Negocio</label>
+                        <input type="text" required class="w-full px-4 py-3 rounded-xl bg-black/40 border border-white/10 text-white text-sm focus:border-[#D4AF37] focus:outline-none" placeholder="Ej. Abarrotes San José">
+                    </div>
+                    <div class="grid sm:grid-cols-2 gap-4">
+                        <div>
+                            <label class="block text-[10px] font-bold uppercase tracking-wider text-[#D4AF37] mb-1">Tu Nombre</label>
+                            <input type="text" required class="w-full px-4 py-3 rounded-xl bg-black/40 border border-white/10 text-white text-sm focus:border-[#D4AF37] focus:outline-none" placeholder="Nombre completo">
+                        </div>
+                        <div>
+                            <label class="block text-[10px] font-bold uppercase tracking-wider text-[#D4AF37] mb-1">WhatsApp / Teléfono</label>
+                            <input type="tel" required class="w-full px-4 py-3 rounded-xl bg-black/40 border border-white/10 text-white text-sm focus:border-[#D4AF37] focus:outline-none" placeholder="999 000 0000">
+                        </div>
+                    </div>
+                    <button type="submit" class="w-full py-4 rounded-xl font-bold text-[#0B1F3A] bg-[#D4AF37] hover:bg-amber-400 transition text-sm shadow-lg shadow-[#D4AF37]/20">
+                        Quiero ver ClinPOS en Acción
+                    </button>
+                </form>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- CASOS DE ÉXITO -->
+    <section id="casos" class="py-24 bg-white border-t border-gray-100">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center max-w-2xl mx-auto space-y-3 mb-16">
+                <span class="text-xs font-bold uppercase tracking-widest text-[#D4AF37]">Resultados Reales</span>
+                <h2 class="text-3xl font-extrabold text-[#0B1F3A] tracking-tight">Casos de Éxito</h2>
+            </div>
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="p-8 rounded-3xl bg-gray-50 border border-gray-100 space-y-3">
+                    <span class="text-xs font-bold text-[#D4AF37]">RETAIL & COMERCIO</span>
+                    <h3 class="text-xl font-bold text-[#0B1F3A]">Optimización en Cadena de Minisupers</h3>
+                    <p class="text-sm text-gray-600 leading-relaxed">Implementación de ClinPOS en 5 tiendas locales, logrando reducir mermas en inventario un 22% y acelerando la atención en caja.</p>
+                </div>
+                <div class="p-8 rounded-3xl bg-gray-50 border border-gray-100 space-y-3">
+                    <span class="text-xs font-bold text-[#D4AF37]">ORGANIZACIONAL</span>
+                    <h3 class="text-xl font-bold text-[#0B1F3A]">Reestructuración de Capital Humano</h3>
+                    <p class="text-sm text-gray-600 leading-relaxed">Consultoría integral de clima laboral y tabuladores para empresa de servicios, disminuyendo la rotación de personal en un 35%.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACTO -->
+    <section id="contacto" class="py-24 bg-gray-50 border-t border-gray-100">
+        <div class="max-w-3xl mx-auto px-6">
+            <div class="text-center space-y-3 mb-12">
+                <span class="text-xs font-bold uppercase tracking-widest text-[#D4AF37]">Hablemos</span>
+                <h2 class="text-3xl font-extrabold text-[#0B1F3A] tracking-tight">Ponte en Contacto con Mauricio Santamaría</h2>
+            </div>
+            <form id="contact-form" class="p-8 sm:p-10 rounded-3xl bg-white border border-gray-200 shadow-sm space-y-6">
+                <div class="grid sm:grid-cols-2 gap-6">
+                    <div>
+                        <label class="block text-xs font-bold uppercase tracking-wider text-gray-700 mb-2">Nombre</label>
+                        <input type="text" required class="w-full px-4 py-3 rounded-xl bg-gray-50 border border-gray-200 text-[#0B1F3A] text-sm focus:border-[#D4AF37] focus:outline-none" placeholder="Tu nombre">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-bold uppercase tracking-wider text-gray-700 mb-2">Correo Electrónico</label>
+                        <input type="email" required class="w-full px-4 py-3 rounded-xl bg-gray-50 border border-gray-200 text-[#0B1F3A] text-sm focus:border-[#D4AF37] focus:outline-none" placeholder="correo@empresa.com">
+                    </div>
+                </div>
+                <div>
+                    <label class="block text-xs font-bold uppercase tracking-wider text-gray-700 mb-2">Servicio de Interés</label>
+                    <select class="w-full px-4 py-3 rounded-xl bg-gray-50 border border-gray-200 text-[#0B1F3A] text-sm focus:border-[#D4AF37] focus:outline-none">
+                        <option>Recursos Humanos / Capacitación</option>
+                        <option>Desarrollo Organizacional</option>
+                        <option>Automatización y Sistemas</option>
+                        <option>ClinPOS (Punto de Venta)</option>
+                    </select>
+                </div>
+                <div>
+                    <label class="block text-xs font-bold uppercase tracking-wider text-gray-700 mb-2">Mensaje</label>
+                    <textarea rows="4" required class="w-full px-4 py-3 rounded-xl bg-gray-50 border border-gray-200 text-[#0B1F3A] text-sm focus:border-[#D4AF37] focus:outline-none" placeholder="¿Cómo podemos ayudarte?"></textarea>
+                </div>
+                <button type="submit" class="w-full py-4 rounded-xl font-bold text-[#0B1F3A] bg-[#D4AF37] hover:bg-amber-400 transition text-sm shadow-md">
+                    Enviar Mensaje
+                </button>
+            </form>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="py-10 bg-[#0B1F3A] text-white text-xs border-t border-white/10">
+        <div class="max-w-7xl mx-auto px-6 flex flex-col sm:flex-row justify-between items-center gap-4">
+            <p>MS Soluciones © 2026 • Dirigido por Mauricio Santamaría</p>
+            <div class="flex gap-6">
+                <a href="#hero" class="hover:text-[#D4AF37]">Inicio</a>
+                <a href="#servicios" class="hover:text-[#D4AF37]">Servicios</a>
+                <a href="#clinpos" class="hover:text-[#D4AF37]">ClinPOS</a>
+                <a href="#contacto" class="hover:text-[#D4AF37]">Contacto</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WHATSAPP FLOTANTE -->
+    <a href="https://wa.me/529994937978?text=Hola,%20me%20gustaría%20más%20información%20sobre%20sus%20servicios" target="_blank" class="fixed bottom-6 right-6 z-50 w-14 h-14 rounded-full bg-emerald-500 hover:bg-emerald-400 text-white flex items-center justify-center text-2xl shadow-2xl transition hover:scale-110">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+
+    <script>
+        // Menú móvil toggle
+        const menuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        if (menuBtn && mobileMenu) {
+            menuBtn.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+            mobileMenu.querySelectorAll('a').forEach(link => {
+                link.addEventListener('click', () => mobileMenu.classList.add('hidden'));
+            });
+        }
+
+        // Formularios
+        document.getElementById('demo-form')?.addEventListener('submit', (e) => {
+            e.preventDefault();
+            alert('¡Gracias! Nos pondremos en contacto contigo para activar tu demo de ClinPOS.');
+            e.target.reset();
+        });
+        document.getElementById('contact-form')?.addEventListener('submit', (e) => {
+            e.preventDefault();
+            alert('¡Mensaje enviado con éxito! Mauricio Santamaría se pondrá en contacto pronto.');
+            e.target.reset();
+        });
+    </script>
+</body>
+</html>
